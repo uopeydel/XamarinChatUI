@@ -25,24 +25,37 @@ namespace ChatApp.ActivityScript
             SetContentView(Resource.Layout.activity_chat);
             // Create your application here
 
-            var textTyper = FindViewById<EditText>(Resource.Id.forms_centralfragments_chat_chat_editText);
+            var textTyper = FindViewById<EditText>(Resource.Id.textMessageTyper);
+            var linLayout = FindViewById<LinearLayout>(Resource.Id.linLayout);
+            var btnAdd = FindViewById<Button>(Resource.Id.btnSend);
+            var scrollChatView = FindViewById<ScrollView>(Resource.Id.messageScroll);
 
-            var btnAdd = FindViewById<Button>(Resource.Id.forms_centralfragments_chat_chat_sendButton);
             btnAdd.Click += (sender, args) =>
             {
                 SwapLeftRight = !SwapLeftRight;
                 var textView = new TextView(this)
                 {
-                    Text = textTyper.Text + "xxx",
+                    Text = textTyper.Text,
                 };
                 textView.Gravity = SwapLeftRight == true ? GravityFlags.Right : GravityFlags.Left;
 
                 textView.SetWidth(ViewGroup.LayoutParams.MatchParent);
                 textView.SetForegroundGravity(GravityFlags.Right);
 
-                var linLayout = FindViewById<LinearLayout>(Resource.Id.linLayout);
+
                 linLayout.AddView(textView);
+                scrollChatView.FullScroll(FocusSearchDirection.Down);
+
             };
+
+
+            scrollChatView.ScrollChange += (sender, args) =>
+            {
+                //todo check scroll is bottom ? if bottom when other send chat , auto scroll down
+
+            };
+
+
         }
     }
 }

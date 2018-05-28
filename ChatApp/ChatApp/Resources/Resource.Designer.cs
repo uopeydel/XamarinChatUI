@@ -2264,6 +2264,9 @@ namespace ChatApp
 			// aapt resource value: 0x7f080028
 			public const int bottom = 2131230760;
 			
+			// aapt resource value: 0x7f080075
+			public const int btnSend = 2131230837;
+			
 			// aapt resource value: 0x7f080079
 			public const int btn_login = 2131230841;
 			
@@ -2339,9 +2342,6 @@ namespace ChatApp
 			// aapt resource value: 0x7f080066
 			public const int edit_query = 2131230822;
 			
-			// aapt resource value: 0x7f080073
-			public const int empty = 2131230835;
-			
 			// aapt resource value: 0x7f080021
 			public const int end = 2131230753;
 			
@@ -2375,15 +2375,6 @@ namespace ChatApp
 			// aapt resource value: 0x7f08003f
 			public const int @fixed = 2131230783;
 			
-			// aapt resource value: 0x7f080076
-			public const int forms_centralfragments_chat_chat_editLayout = 2131230838;
-			
-			// aapt resource value: 0x7f080077
-			public const int forms_centralfragments_chat_chat_editText = 2131230839;
-			
-			// aapt resource value: 0x7f080078
-			public const int forms_centralfragments_chat_chat_sendButton = 2131230840;
-			
 			// aapt resource value: 0x7f080005
 			public const int home = 2131230725;
 			
@@ -2402,8 +2393,8 @@ namespace ChatApp
 			// aapt resource value: 0x7f080046
 			public const int image = 2131230790;
 			
-			// aapt resource value: 0x7f080075
-			public const int imgEmpty = 2131230837;
+			// aapt resource value: 0x7f080078
+			public const int imgEmpty = 2131230840;
 			
 			// aapt resource value: 0x7f080095
 			public const int info = 2131230869;
@@ -2417,8 +2408,8 @@ namespace ChatApp
 			// aapt resource value: 0x7f080034
 			public const int left = 2131230772;
 			
-			// aapt resource value: 0x7f080074
-			public const int linLayout = 2131230836;
+			// aapt resource value: 0x7f080077
+			public const int linLayout = 2131230839;
 			
 			// aapt resource value: 0x7f08009a
 			public const int line1 = 2131230874;
@@ -2432,11 +2423,17 @@ namespace ChatApp
 			// aapt resource value: 0x7f080048
 			public const int list_item = 2131230792;
 			
+			// aapt resource value: 0x7f080073
+			public const int mainMessageTab = 2131230835;
+			
 			// aapt resource value: 0x7f0800a0
 			public const int masked = 2131230880;
 			
 			// aapt resource value: 0x7f08008e
 			public const int media_actions = 2131230862;
+			
+			// aapt resource value: 0x7f080076
+			public const int messageScroll = 2131230838;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -2605,6 +2602,9 @@ namespace ChatApp
 			
 			// aapt resource value: 0x7f08009b
 			public const int text2 = 2131230875;
+			
+			// aapt resource value: 0x7f080074
+			public const int textMessageTyper = 2131230836;
 			
 			// aapt resource value: 0x7f080052
 			public const int textSpacerNoButtons = 2131230802;
