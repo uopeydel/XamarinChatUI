@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Text;
 using Android.Views;
 using Android.Widget;
-using static Android.App.ActionBar; 
+using static Android.App.ActionBar;
 
 
 namespace ChatApp.ActivityScript
@@ -33,13 +34,18 @@ namespace ChatApp.ActivityScript
 
             btnAdd.Click += (sender, args) =>
             {
+                if (string.IsNullOrEmpty(textTyper.Text))
+                {
+                    return;
+                }
+
                 SwapLeftRight = !SwapLeftRight;
                 var textView = new TextView(this)
                 {
                     Text = textTyper.Text,
+                    Gravity = SwapLeftRight == true ? GravityFlags.Right : GravityFlags.Left,
                 };
-                textView.Gravity = SwapLeftRight == true ? GravityFlags.Right : GravityFlags.Left;
-
+                textView.SetTextColor(Color.White);
                 textView.SetWidth(ViewGroup.LayoutParams.MatchParent);
                 textView.SetForegroundGravity(GravityFlags.Right);
 
@@ -59,9 +65,9 @@ namespace ChatApp.ActivityScript
                     if (scrollBtn <= scrollView.ScrollY)
                     {
                         textTyper.Text = $"This is SCROLL bottom end; //hightOfFirstObject {hightOfFirstObject}  // scrollView Height {scrollView.Height}  // ScrollY {scrollView.ScrollY}";
-                    } 
+                    }
 
-                } 
+                }
             };
 
 
