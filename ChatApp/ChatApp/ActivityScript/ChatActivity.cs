@@ -11,7 +11,8 @@ using Android.Support.Design.Widget;
 using Android.Text;
 using Android.Views;
 using Android.Widget;
-using static Android.App.ActionBar;
+using static Android.App.ActionBar; 
+
 
 namespace ChatApp.ActivityScript
 {
@@ -51,8 +52,16 @@ namespace ChatApp.ActivityScript
 
             scrollChatView.ScrollChange += (sender, args) =>
             {
-                //todo check scroll is bottom ? if bottom when other send chat , auto scroll down
+                if (sender is ScrollView scrollView)
+                {
+                    var hightOfFirstObject = scrollView.GetChildAt(0).Height;
+                    var scrollBtn = hightOfFirstObject - scrollView.Height;
+                    if (scrollBtn <= scrollView.ScrollY)
+                    {
+                        textTyper.Text = $"This is SCROLL bottom end; //hightOfFirstObject {hightOfFirstObject}  // scrollView Height {scrollView.Height}  // ScrollY {scrollView.ScrollY}";
+                    } 
 
+                } 
             };
 
 
